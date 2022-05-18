@@ -1,0 +1,12 @@
+
+body{
+    text-align: center;
+}
+
+#product > input{
+   font-size : 20px;
+}
+
+#product > select{
+    font-size : 20px;
+ }

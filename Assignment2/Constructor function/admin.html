@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-comm 1</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <form id="product" action="">
+        <input id="name" type="text" placeholder="product name">
+        <input id="category" type="text" placeholder="category">
+        <input id="image" type="text" placeholder="image url">
+        <input id="price" type="text" placeholder="price">
+        <select id="gender">
+            <option value="">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select id="sold" name="" value="false">
+             <option value="">false</option>
+             <option value="">true</option>
+        </select>
+        <input onclick="prodadd()" id="add" type="submit">
+    </form>
+</body>
+</html>
+
+<script src="admin.js"></script>
