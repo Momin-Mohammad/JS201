@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobile Inheritance model</title>
+
+    <style>
+        body > div{
+            font-size : 25px;
+            font-weight: 600;
+            padding : 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cars</h1>
+    <div id="model1"></div>
+    <div id="model2"></div>
+    <div id="model3"></div>
+    <div id="prototype"></div>
+</body>
+</html>
+
+<script>
+
+// By using Object.create()
+const AutomobileProto = {
+    engine : "IC Engine",
+    clutch : "friction Clutch",
+    brake : "ABS",
+    steering : "Power Steering"
+}
+
+const model1 = Object.create(AutomobileProto, {car_name: {value: "Skoda"}});
+const model2 = Object.create(AutomobileProto);
+model2.car_name = "Swift Desire"
+const model3 = Object.create(AutomobileProto, {car_name: {value: "Ertiga"}})
+
+let div1 = document.getElementById("model1");
+let div2 = document.getElementById("model2");
+let div3 = document.getElementById("model3");
+
+console.log(model1);
+console.log(model2);
+console.log(model3);
+console.log("PROTOTYPE : ",model1.__proto__);
+
+div1.innerText = model1.car_name;
+div2.innerText = model2.car_name;
+div3.innerText = model3.car_name;
+
+console.log("<--------By using contructor function--------------->")
+// By using Constructor function.
+ function AutoProto(name,brake){
+    this.car_name = name
+    this.engine = "IC Engine",
+    this.clutch = "friction Clutch",
+    this.brake = brake,
+    this.steering = "Power Steering"
+ }
+
+let car1 = new AutoProto("Skoda","Drum brakes")
+console.log(car1)
+
+let car2 = new AutoProto("Swift Desire","Disc brakes")
+console.log(car2)
+
+let car3 = new AutoProto("Ertiga","Disc brakes")
+console.log(car3)
+
+AutoProto.prototype.changeBrake = function(brake) {
+    this.brake = brake;
+}
+
+console.log("<-------------After changing Swift Desire's brake type------------------>");
+car2.changeBrake("Drum brakes");
+console.log(car2)
+
+
+</script>
