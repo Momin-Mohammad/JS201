@@ -1,0 +1,60 @@
+body{
+    background-color: rgb(239, 231, 231);
+    padding:100px;
+}
+
+#container{
+    width : 100%;
+    height: auto;
+    margin:auto;
+    align-items: center;
+    /* border : 1px solid red; */
+}
+
+#details{
+    margin : auto;
+    width : 50%;
+    text-align: center;
+    /* border : 1px solid red; */
+}
+
+
+#form > input{
+    width : 95%;
+    height : 50px;
+    font-size : 30px;
+    margin-top:30px;
+    border-radius: 5px;
+    padding : 5px;
+    font-family: cursive;
+}
+
+#submit{
+    cursor: pointer;
+}
+
+#dashboard{
+    width : 100%;
+    border-radius : 10px;
+    padding:10px;
+    font-weight: 600;
+}
+
+#dashboard > a{
+    color: blue;
+    width : auto;
+    font-size : 35px;
+    text-decoration: none;
+    font-family: cursive;
+}
+
+#stuNum {
+    width : 80%;
+    margin : auto;
+    border-left : 5px solid black;
+    border-right : 5px solid black;
+    font-size : 30px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: cursive;
+}
